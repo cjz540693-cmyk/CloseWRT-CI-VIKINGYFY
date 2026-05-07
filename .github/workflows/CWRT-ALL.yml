@@ -82,44 +82,6 @@ jobs:
           delete_workflows: true
           workflows_keep_day: 0
 
-  config-mt7981:
-    if: ${{ inputs.MT7981_BUILD }}
-    name: MT7981
-    uses: ./.github/workflows/WRT-CORE.yml
-    with:
-      #编译配置
-      WRT_CONFIG: MT7981
-      #编译配置文件（可自定义）
-      WRT_CONFIG_FILE: ${{ inputs.MT7981_CONFIG != '' && inputs.MT7981_CONFIG || 'MT7981.txt' }}
-      #默认主题
-      WRT_THEME: argon
-      #默认主机名
-      WRT_NAME: CWRT
-      #默认WIFI名称
-      WRT_SSID: CWRT
-      #默认WIFI密码
-      WRT_WORD: cjz88888888
-      #默认地址
-      WRT_IP: 192.168.110.1
-      #默认密码，仅作提示，修改无用
-      WRT_PW: 无
-      #源码链接
-      WRT_REPO: https://github.com/padavanonly/immortalwrt-mt798x-6.6.git
-      #源码分支
-      WRT_BRANCH: openwrt-24.10-6.6
-      #源码名称
-      WRT_SOURCE: padavanonly/immortalwrt-mt798x-6.6
-      #插件调整
-      WRT_PACKAGE: ${{inputs.PACKAGE}}
-      #GFW开关
-      WRT_GFW: ${{inputs.GFW}}
-      #USB 选项
-      WRT_USB: ${{inputs.USB}}
-      #MMC 开关
-      WRT_MMC: ${{inputs.MMC}}
-      #仅输出配置文件
-      WRT_TEST: ${{inputs.TEST}}
-
   config-mt7986:
     if: ${{ inputs.MT7986_BUILD }}
     name: MT7986
