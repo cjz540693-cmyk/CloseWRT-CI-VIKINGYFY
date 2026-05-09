@@ -108,7 +108,7 @@ jobs:
       #源码分支
       WRT_BRANCH: openwrt-24.10-6.6
       #源码名称
-      WRT_SOURCE: cjz540693-cmyk/lede
+      WRT_SOURCE: cjz540693-cmyk/immortalwrt-mt798x-6.6-padavanonly
       #插件调整
       WRT_PACKAGE: ${{inputs.PACKAGE}}
       #GFW开关
